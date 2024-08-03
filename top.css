@@ -1,0 +1,10 @@
+.fv-box {
+    background-image: url(back.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+header {
+    margin-bottom: 5em;
+}
