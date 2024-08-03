@@ -1,10 +1,291 @@
-.fv-box {
-    background-image: url(back.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    box-shadow: 6px 6px 10px 0px rgba(0, 0, 0, 0.4);
+/********************************
+
+共通パーツ
+
+********************************/
+.g {
+    margin: 0 0.5em;
 }
 
+.backwindw {
+    background-image: url(wind.jpg);
+    background-image: cover;
+    background-position: center;
+    height: 300px;
+
+}
+
+/********************************
+
+	FV(ファーストビュー)関係
+
+********************************/
+
 header {
-    margin-bottom: 5em;
+    padding-top: 0.5em;
+}
+
+.top-back {
+    background-image: url(back.jpg);
+    background-position: center top;
+    background-repeat: repeat-x;
+    height: 745px;
+}
+
+
+@media(min-width:1280px) {
+    .fv-box {
+        margin: 0 auto;
+    }
+
+
+}
+
+/********** 開幕まであと何日 **********/
+.fv-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row-reverse;
+    max-width: 1280px;
+
+}
+
+.fv-box p {
+    writing-mode: vertical-rl;
+    color: white;
+    font-size: 2em;
+    margin: 0.5em 0;
+    line-height: 60px;
+    padding-left: 2em;
+}
+
+.fv-box p b {
+    font-size: 74px;
+}
+
+.fv-box img {
+    width: 100%;
+    object-fit:contain;
+    flex-basis: 60%;
+    max-width: 450px;
+}
+
+@media(min-width:650px) {
+    .top-back {
+        height: 580px;
+    }
+
+    #fv .eventdate {
+        padding: 1em 0;
+    }
+}
+
+@media(min-width:700px) {
+    .fv-box img {
+        max-width: 500px;
+    }
+}
+
+@media(min-width:1000px) {
+    .fv-box img {
+        max-width: 700px;
+    }
+}
+
+@media(min-width:1300px) {
+    .fv-box img {
+        max-width: 820px;
+    }
+}
+
+/********** 開催日時 **********/
+.eventdate {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    max-width: 1280px;
+    padding: 0.25em;
+}
+
+.eventdate p {
+    width:fit-content;
+    color: white;
+    font-size: 24px;
+    height: fit-content ;
+    margin: 0;
+}
+
+@media(min-width:1280px) {
+    .eventdate {
+        margin: 0 auto;
+    }
+}
+
+/********************************
+
+    section2
+	モノづくりの仕事に触れる・・・・・
+
+********************************/
+#intro {
+    padding: 2em 0;
+    margin: 0 0.5em;
+}
+
+#intro > p {
+    font-weight: bold;
+    width: fit-content;
+    margin: 0.5em 0;
+    line-height: 2;
+}
+
+.intro-box {
+    margin: 0 auto;
+    width: fit-content;
+}
+
+.intro-box p {
+    writing-mode: vertical-rl;
+}
+
+.intro-box > p {
+    font-size: 20px;
+    width: fit-content;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+.intro-text {
+    display: flex;
+}
+
+/********** 〇〇に触れる **********/
+.intro-text p {
+    font-size: 2em;
+    margin: 0.5em;
+    font-weight: bold;
+}
+
+.intro-text p b {
+    color: var(--main-color);
+}
+
+@media(min-width:400px) {
+    #intro > p {
+        margin: 0 auto;
+        line-height: 3;
+    }
+}
+
+@media(min-width:700px) {
+    #intro > p {
+        font-size: 20px;
+    }
+
+   .open .openback p {
+        font-size: 44px;
+        padding-top: 11em;
+    }
+}
+
+/********************************
+
+    section3
+	いざ、「うえだ・さかき産業の陣」開幕
+
+********************************/
+.openback {
+    background-image: url(secback.jpg);
+    background-position: center top;
+    background-size: cover;
+}
+
+.openback p {
+    padding-top: 15em;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.openback p b {
+    font-size: 80px;
+    color: var(--main-color);
+}
+
+
+
+/********************************
+
+    section4・5共通パーツ
+	参加企業一覧
+    開催概要
+
+********************************/
+.comsec {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 5em auto;
+    max-width: 1100px;
+    gap: 0 2em;
+}
+
+.comsec h2 {
+    color: var(--main-color);
+    border-right: 3px solid var(--main-color);
+    border-left: 3px solid var(--main-color);
+    writing-mode: vertical-lr;
+    padding: 0 1em 1em  1em;
+    margin: 2em auto;
+    height: fit-content;
+}
+
+.comsec h2::before {
+    content: url(hata.svg);
+    width: 100%;
+    height: 100%;
+}
+
+.overview {
+    border-radius: 39px;
+    box-shadow: 0px 0px 15px -2px #777777;
+    margin: 0 0.5em;
+    padding: 2em 0;
+    max-width: 880px;
+}
+
+.overview div {
+    border-bottom: 2px solid #B49664 ;
+    margin: 0 0.5em;
+
+}
+.overview div dt {
+    color: var(--main-color);
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 1em 0;
+    flex-basis: 115px;
+}
+
+.overview div dd {
+    margin: 0;
+    padding: 1em 0;
+}
+
+.iinkai {
+    text-align: center;
+}
+
+@media(min-width:600px) {
+.overview div {
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    margin: 0 3em;
+}
 }
