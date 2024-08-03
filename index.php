@@ -6,6 +6,10 @@ $description = '【TBD】';
 $keywords = '【TBD】';
 $local_path = '/'; // サイトのルートからのパスを記入
 $og_image = '【TBD】';  // 
+$currentDate = new DateTime();// 現在の日時を取得
+$targetDate = new DateTime('2024-12-31'); // 目標日時をここで登録する
+$interval = $currentDate->diff($targetDate);// 日数の差をここで計算
+$daysRemaining = $interval->format('%a');// 残りの日数を取得
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -28,11 +32,11 @@ $og_image = '【TBD】';  //
 <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Mincho&family=Zen+Old+Mincho:wght@400;500;600;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-<div class="top-back">
+<div class="top-back" id="wrap">
     <?php include $base . '/header.php' ?>
     <section id="fv" class="g">
         <div class="fv-box">
-            <p>開幕まで<br>あと<b> 五十七 </b>日</p>
+            <p>開幕まで<br>あと<b> <?php echo $daysRemaining ?> </b>日</p>
             <img src="title.png" alt="">
         </div>
         <div class="eventdate">
