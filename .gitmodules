@@ -1,0 +1,4 @@
+[submodule "itouyuuki"]
+	path = itouyuuki
+	url = git@github.com:itouyuuki/itouyuuki.git
+	branch = main
